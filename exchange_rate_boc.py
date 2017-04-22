@@ -1,11 +1,10 @@
 import httplib, urllib
 from urlparse import urlparse
 from HTMLParser import HTMLParser
-from htmlentitydefs import name2codepoint
 
 URL_PBOC_EXCHANGE_RATE = 'http://www.boc.cn/sourcedb/whpj/enindex.html'
 
-class MyHTMLParser(HTMLParser):
+class BOCHTMLParser(HTMLParser):
     def __init__(self):
         self.in_exchange_rate_table = False
         self.in_tr = False
@@ -43,29 +42,18 @@ class MyHTMLParser(HTMLParser):
         if self.in_exchange_rate_table and self.in_tr and self.in_td:
             self.current_data += data
 
-    def handle_entityref(self, name):
-        c = unichr(name2codepoint[name])
-        # print "Named ent:", c
 
-    def handle_charref(self, name):
-        if name.startswith('x'):
-            c = unichr(int(name[1:], 16))
-        else:
-            c = unichr(int(name))
-        # print "Num ent  :", c
+if __name__ == '__main__':
+    parser = BOCHTMLParser()
 
+    u = urlparse(URL_PBOC_EXCHANGE_RATE)
+    conn = httplib.HTTPConnection(u.hostname, u.port)
 
-parser = MyHTMLParser()
+    conn.request("GET", u.path)
+    response = conn.getresponse()
+    html = response.read()
+    conn.close()
 
-u = urlparse(URL_PBOC_EXCHANGE_RATE)
-conn = httplib.HTTPConnection(u.hostname, u.port)
-
-conn.request("GET", u.path)
-response = conn.getresponse()
-html = response.read()
-conn.close()
-
-parser.feed(html)
-for each in parser.exchange_rates:
-    print each
-
+    parser.feed(html)
+    for each in parser.exchange_rates:
+        print each

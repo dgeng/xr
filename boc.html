@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0044)http://www.boc.cn/sourcedb/whpj/enindex.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!--<base href="http://www.boc.cn/en/">--><base href=".">
+<title>BOC EXCHANGE RATE(new)</title>
+<link href="./boc_files/boc08.css" rel="stylesheet" type="text/css">
+<script>
+ 
+
+function getNav(nCurrentPage,nCountPage,sPageName,sPageEXT)
+{ 
+	var currentPage = nCurrentPage;
+	var prevPage = currentPage-1;
+	var nextPage = currentPage+1;
+	var countPage = nCountPage;
+	document.write("Total: "+countPage+"&nbsp;&nbsp;");
+
+	//set prevPage
+	if(countPage>1&&currentPage!=0&&currentPage!=1)
+		document.write("<a href=\"/sourcedb/whpj/en"+sPageName+"."+sPageEXT+"\" class='nav'>[First Page]</a>&nbsp;<a href=\"/sourcedb/whpj/en"+sPageName+"_" + prevPage + "."+sPageEXT+"\" class='nav'>[Previous]</a>&nbsp;");
+	else if(countPage>1&&currentPage!=0&&currentPage==1)
+		document.write("<a href=\"/sourcedb/whpj/en"+sPageName+"."+sPageEXT+"\" class='nav'>[First Page]</a>&nbsp;<a href=\"/sourcedb/whpj/en"+sPageName+"."+sPageEXT+"\" class='nav'>[Previous]</a>&nbsp;");
+	else
+		document.write("[First Page]&nbsp;[Previous]&nbsp;");
+	//loop
+	var num = 9;
+	for(var i=0+(currentPage-1-(currentPage-1)%num) ; i<=(num+(currentPage-1-(currentPage-1)%num))&&(i<countPage) ; i++){
+		if(currentPage==i)
+			document.write("<span style=\"color:#FF0000;\">"+(i+1)+"</span>&nbsp;");
+		else if(i==0)
+			document.write("<a href=\"/sourcedb/whpj/en"+sPageName+"."+sPageEXT+"\" class='nav'>"+(i+1)+"</a>&nbsp;");
+		else
+			document.write("<a href=\"/sourcedb/whpj/en"+sPageName+"_" + i + "."+sPageEXT+"\" class='nav'>"+(i+1)+"</a>&nbsp;");
+	}
+	
+	//[Next]
+	if(countPage>1&&currentPage!=(countPage-1))
+		document.write("<a href=\"/sourcedb/whpj/en"+sPageName+"_" + nextPage + "."+sPageEXT+"\" class='nav'>[Next]</a>&nbsp;<a href=\"/sourcedb/whpj/en"+sPageName+"_" + (countPage-1) + "." + sPageEXT+"\" class='nav'>[Last Page]</a>&nbsp;");
+	else
+		document.write("[Next]&nbsp;[Last Page]&nbsp;");
+
+}
+</script>
+
+</head>
+
+<body>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tbody><tr>
+    <td width="15" height="180" align="right" class="pbrdl"><img src="./boc_files/boc08_line2.jpg" width="6" height="180" hspace="1"></td>
+    <td width="661" valign="bottom" background="./boc_files/boc08_r11.jpg"><table width="661" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="150" valign="top"><a href="http://www.boc.cn/index.html"><img src="./boc_files/bankofchina_LOGO.gif" width="183" height="52" hspace="25" vspace="20" border="0"></a></td>
+      </tr>
+      <tr>
+        <td height="25" align="right" background="./boc_files/boc08_line1.gif" class="navl">
+				| <a href="http://www.boc.cn/en/cbservice/" class="nav">Corporate Banking</a>
+			
+				| <a href="http://www.boc.cn/en/pbservice/" class="nav">Personal Banking</a>
+			
+				| <a href="http://www.boc.cn/en/bcservice/" class="nav">Bank Card</a>
+			
+				| <a href="http://www.boc.cn/en/bocinfo/" class="nav">Information</a>
+			
+				| <a href="http://www.boc.cn/en/aboutboc/" class="nav">About Us</a>
+			
+				| <a href="http://www.boc.cn/en/invester/" class="nav">Investor Relations</a>
+			|&nbsp;&nbsp;</td>
+      </tr>
+    </tbody></table></td>
+    <td width="251" valign="top" background="./boc_files/boc08_r12.jpg"><table width="250" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="25" align="center" class="laugl"><a href="http://www.boc.cn/index.html" class="laug">简体中文</a> | <a href="http://www.boc.cn/big5/index.html" class="laug">繁体中文</a> | <a href="http://www.boc.cn/en/index.html" class="laug">ENGLISH</a></td>
+      </tr>
+      
+      <tr>
+        <td height="95" align="center" valign="bottom"><form id="bocsearch" name="bocsearch" method="post" action="http://srh.bankofchina.com/search/sitesearch/search_simp.jsp">
+          <table width="98%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td valign="bottom"><input name="SType" type="hidden" value="1">
+			  <input type="hidden" name="preSWord" value="">
+<input type="hidden" name="searchColumn" value="all">
+<input type="hidden" name="order" value="1"><input name="sword" type="text" class="srh" id="sword"></td>
+              <td><input name="image" type="image" src="./boc_files/boc08_btsearch.gif" align="bottom">
+          </td>
+            </tr>
+          </tbody></table>
+                </form></td>
+      </tr>
+      <tr>
+        <td height="57" align="center"><h3><br>
+              <span class="title">Online Banking</span></h3></td>
+      </tr>
+	  <tr>
+        <td bgcolor="#b10a32"><img src="./boc_files/dot.gif" width="2" height="3"></td>
+      </tr>
+    </tbody></table></td>
+    <td width="23" class="pbrdr"><img src="./boc_files/boc08_line2.jpg" width="9" height="180" hspace="4"></td>
+  </tr>
+</tbody></table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tbody><tr>
+    <td width="15" class="pbrdl">&nbsp;</td>
+    <td width="661" height="400" valign="top"><br>
+    <table width="661" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="15">&nbsp;</td>
+        <td width="155" rowspan="2" class="itmen"><h4>BOC Exchange Rate</h4></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="480" height="30" background="./boc_files/boc08_line3.gif" class="navl">&nbsp;&nbsp;You are here:  
+          <a href="http://www.boc.cn/en/" class="nav">Home</a>&nbsp;&gt;&gt;&nbsp;<a href="http://www.boc.cn/en/bocinfo/" class="nav">Information</a>&nbsp;&gt;&gt;&nbsp;<a href="http://www.boc.cn/sourcedb/whpj/enindex.html" class="nav">BOC Exchange Rate</a></td>
+        <td width="26" background="./boc_files/boc08_line3.gif">&nbsp;</td>
+      </tr>
+    </tbody></table>
+    <br>
+    <br>
+ 
+<table width="600" border="0" cellpadding="5" cellspacing="0" bgcolor="#F2F2F2" align="center">
+		<tbody><tr>
+			<td align="center" valign="top">
+				<table width="600" border="0" cellpadding="5" cellspacing="1" bgcolor="#EAEAEA">
+                        <tbody><tr>
+                          <th width="75" bgcolor="#EFEFEF">Currency Name</th>
+                          <th width="75" bgcolor="#EFEFEF">Buying Rate</th>
+                          <th width="75" bgcolor="#EFEFEF">Cash Buying Rate</th>
+                          <th width="75" bgcolor="#EFEFEF">Selling Rate</th>
+						  <th width="75" bgcolor="#EFEFEF">Cash Selling Rate</th>
+                          <th width="75" bgcolor="#EFEFEF">Middle Rate</th>
+                          <th width="140" bgcolor="#EFEFEF">Pub Time</th>
+                        </tr>
+
+                     
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">AED</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">180.93</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">194.05</td>
+                            <td bgcolor="#FFFFFF">187.66</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">AUD</td>
+                            <td bgcolor="#FFFFFF">518.01</td>
+                            <td bgcolor="#FFFFFF">501.88</td>
+                            <td bgcolor="#FFFFFF">521.64</td>
+							<td bgcolor="#FFFFFF">521.64</td>
+                            <td bgcolor="#FFFFFF">518.15</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">BRL</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">209.98</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">229.67</td>
+                            <td bgcolor="#FFFFFF">218.61</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">CAD</td>
+                            <td bgcolor="#FFFFFF">508.69</td>
+                            <td bgcolor="#FFFFFF">492.6</td>
+                            <td bgcolor="#FFFFFF">512.26</td>
+							<td bgcolor="#FFFFFF">512.52</td>
+                            <td bgcolor="#FFFFFF">511.51</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">CHF</td>
+                            <td bgcolor="#FFFFFF">689.08</td>
+                            <td bgcolor="#FFFFFF">667.82</td>
+                            <td bgcolor="#FFFFFF">693.92</td>
+							<td bgcolor="#FFFFFF">693.92</td>
+                            <td bgcolor="#FFFFFF">689.94</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">DKK</td>
+                            <td bgcolor="#FFFFFF">98.93</td>
+                            <td bgcolor="#FFFFFF">95.88</td>
+                            <td bgcolor="#FFFFFF">99.73</td>
+							<td bgcolor="#FFFFFF">99.73</td>
+                            <td bgcolor="#FFFFFF">99.29</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">EUR</td>
+                            <td bgcolor="#FFFFFF">736.44</td>
+                            <td bgcolor="#FFFFFF">713.51</td>
+                            <td bgcolor="#FFFFFF">741.61</td>
+							<td bgcolor="#FFFFFF">741.61</td>
+                            <td bgcolor="#FFFFFF">738.21</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">GBP</td>
+                            <td bgcolor="#FFFFFF">879.73</td>
+                            <td bgcolor="#FFFFFF">852.33</td>
+                            <td bgcolor="#FFFFFF">885.91</td>
+							<td bgcolor="#FFFFFF">885.91</td>
+                            <td bgcolor="#FFFFFF">882.25</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">HKD</td>
+                            <td bgcolor="#FFFFFF">88.4</td>
+                            <td bgcolor="#FFFFFF">87.69</td>
+                            <td bgcolor="#FFFFFF">88.74</td>
+							<td bgcolor="#FFFFFF">88.74</td>
+                            <td bgcolor="#FFFFFF">88.52</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">IDR</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">0.0499</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">0.0535</td>
+                            <td bgcolor="#FFFFFF">0.0517</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">INR</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">10.013</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">11.2912</td>
+                            <td bgcolor="#FFFFFF">10.6515</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">JPY</td>
+                            <td bgcolor="#FFFFFF">6.2939</td>
+                            <td bgcolor="#FFFFFF">6.0978</td>
+                            <td bgcolor="#FFFFFF">6.3381</td>
+							<td bgcolor="#FFFFFF">6.3381</td>
+                            <td bgcolor="#FFFFFF">6.3007</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">KRW</td>
+                            <td bgcolor="#FFFFFF">0.6046</td>
+                            <td bgcolor="#FFFFFF">0.5833</td>
+                            <td bgcolor="#FFFFFF">0.6094</td>
+							<td bgcolor="#FFFFFF">0.6316</td>
+                            <td bgcolor="#FFFFFF">0.605</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">MOP</td>
+                            <td bgcolor="#FFFFFF">85.98</td>
+                            <td bgcolor="#FFFFFF">83.09</td>
+                            <td bgcolor="#FFFFFF">86.3</td>
+							<td bgcolor="#FFFFFF">89.07</td>
+                            <td bgcolor="#FFFFFF">86.04</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">MYR</td>
+                            <td bgcolor="#FFFFFF">157.04</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">158.14</td>
+							<td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">157.14</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">NOK</td>
+                            <td bgcolor="#FFFFFF">79.1</td>
+                            <td bgcolor="#FFFFFF">76.66</td>
+                            <td bgcolor="#FFFFFF">79.74</td>
+							<td bgcolor="#FFFFFF">79.74</td>
+                            <td bgcolor="#FFFFFF">79.92</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">NZD</td>
+                            <td bgcolor="#FFFFFF">482.83</td>
+                            <td bgcolor="#FFFFFF">467.94</td>
+                            <td bgcolor="#FFFFFF">486.22</td>
+							<td bgcolor="#FFFFFF">492.18</td>
+                            <td bgcolor="#FFFFFF">481.68</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">PHP</td>
+                            <td bgcolor="#FFFFFF">13.76</td>
+                            <td bgcolor="#FFFFFF">13.34</td>
+                            <td bgcolor="#FFFFFF">13.88</td>
+							<td bgcolor="#FFFFFF">14.52</td>
+                            <td bgcolor="#FFFFFF">13.81</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">RUB</td>
+                            <td bgcolor="#FFFFFF">12.15</td>
+                            <td bgcolor="#FFFFFF">11.41</td>
+                            <td bgcolor="#FFFFFF">12.25</td>
+							<td bgcolor="#FFFFFF">12.71</td>
+                            <td bgcolor="#FFFFFF">12.27</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">SAR</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">178.53</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">187.82</td>
+                            <td bgcolor="#FFFFFF">183.79</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">SEK</td>
+                            <td bgcolor="#FFFFFF">76.16</td>
+                            <td bgcolor="#FFFFFF">73.81</td>
+                            <td bgcolor="#FFFFFF">76.78</td>
+							<td bgcolor="#FFFFFF">76.78</td>
+                            <td bgcolor="#FFFFFF">76.68</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">SGD</td>
+                            <td bgcolor="#FFFFFF">491.43</td>
+                            <td bgcolor="#FFFFFF">476.27</td>
+                            <td bgcolor="#FFFFFF">494.88</td>
+							<td bgcolor="#FFFFFF">494.88</td>
+                            <td bgcolor="#FFFFFF">492.71</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">THB</td>
+                            <td bgcolor="#FFFFFF">19.96</td>
+                            <td bgcolor="#FFFFFF">19.34</td>
+                            <td bgcolor="#FFFFFF">20.12</td>
+							<td bgcolor="#FFFFFF">20.74</td>
+                            <td bgcolor="#FFFFFF">19.99</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">TRY</td>
+                            <td bgcolor="#FFFFFF">188.1</td>
+                            <td bgcolor="#FFFFFF">178.89</td>
+                            <td bgcolor="#FFFFFF">189.62</td>
+							<td bgcolor="#FFFFFF">198.83</td>
+                            <td bgcolor="#FFFFFF">189.3</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">TWD</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">21.89</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">23.61</td>
+                            <td bgcolor="#FFFFFF">22.66</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">USD</td>
+                            <td bgcolor="#FFFFFF">687.51</td>
+                            <td bgcolor="#FFFFFF">681.87</td>
+                            <td bgcolor="#FFFFFF">690.27</td>
+							<td bgcolor="#FFFFFF">690.27</td>
+                            <td bgcolor="#FFFFFF">688.23</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+					 
+						<tr align="center">
+                            <td bgcolor="#FFFFFF">ZAR</td>
+                            <td bgcolor="#FFFFFF">52.26</td>
+                            <td bgcolor="#FFFFFF">48.25</td>
+                            <td bgcolor="#FFFFFF">52.62</td>
+							<td bgcolor="#FFFFFF">56.63</td>
+                            <td bgcolor="#FFFFFF">52.43</td>
+                            <td bgcolor="#FFFFFF">2017-04-22&nbsp;
+		21:52:59</td>
+						  </tr>
+					
+                        
+			</tbody></table>
+			</td>
+		</tr> 
+	</tbody></table> 
+	<table width="560" border="0" cellpadding="5" cellspacing="0" align="center">
+		<tbody><tr>
+		<td height="30" align="center"><script>
+  	getNav(0,5,"index","html");
+  </script>Total: 5&nbsp;&nbsp;[First Page]&nbsp;[Previous]&nbsp;<span style="color:#FF0000;">1</span>&nbsp;<a href="http://www.boc.cn/sourcedb/whpj/enindex_1.html" class="nav">2</a>&nbsp;<a href="http://www.boc.cn/sourcedb/whpj/enindex_2.html" class="nav">3</a>&nbsp;<a href="http://www.boc.cn/sourcedb/whpj/enindex_3.html" class="nav">4</a>&nbsp;<a href="http://www.boc.cn/sourcedb/whpj/enindex_4.html" class="nav">5</a>&nbsp;<a href="http://www.boc.cn/sourcedb/whpj/enindex_1.html" class="nav">[Next]</a>&nbsp;<a href="http://www.boc.cn/sourcedb/whpj/enindex_4.html" class="nav">[Last Page]</a>&nbsp;</td> 
+		</tr>
+		<tr>
+		<td align="center">
+			<table width="300" border="0" cellpadding="5" align="center" bgcolor="#DDE8F2">
+			<tbody><tr><td>
+<b><a href="http://www.boc.cn/sourcedb/whpj/enindex2.htm" class="nav">Search for more BOC Exchange Rates</a></b>
+ 	</td></tr></tbody></table>	
+</td> 
+		</tr>
+	</tbody></table>
+
+    <table width="580" border="0" align="center" cellpadding="8" cellspacing="0">
+      
+      <tbody><tr>
+        <td width="274" height="40" valign="bottom" class="dashlh">&nbsp;</td>
+        <td width="274" align="right" valign="top" class="dashlh"><span class="navl">[ <a href="javascript:window.close();">Close Window</a> ]</span></td>
+      </tr>
+        
+    </tbody></table>
+    </td>
+    <td width="246" valign="top" class="brd1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="37" class="bocnet"><a href="https://ebs.boc.cn/BocnetClient/LoginFrame.do?_locale=en_US" target="_blank"><img src="./boc_files/boc08_item_bocnetgr.gif" width="128" height="18" border="0"></a></td>
+      </tr>
+      <tr>
+        <td><img src="./boc_files/dot.gif" width="2" height="2"></td>
+      </tr>
+      <tr>
+        <td height="37" class="bocnet"><a href="https://ibank.bank-of-china.com/" target="_blank"><img src="./boc_files/boc08_item_bocnetqy.gif" width="128" height="18" border="0"></a></td>
+      </tr>
+	   
+    </tbody></table>
+      <br>
+      <br>
+      <br>
+      <table width="223" border="0" align="center" cellspacing="4">
+	  
+           <tbody><tr>
+            <td>&nbsp;&nbsp;<img src="./boc_files/boc08_dotb.gif" width="13" height="13" hspace="3" align="absmiddle">
+             <a href="http://www.boc.cn/en/bocinfo/bi1/" class="nav">BOC News</a></td>
+           </tr>
+           <tr>
+             <td><img src="./boc_files/boc08_line5.gif" width="200" height="8"></td>
+           </tr>
+	  
+           <tr>
+            <td>&nbsp;&nbsp;<img src="./boc_files/boc08_dotb.gif" width="13" height="13" hspace="3" align="absmiddle">
+             <a href="http://www.boc.cn/sourcedb/whpj/enindex.html" class="nav">BOC Exchange Rate</a></td>
+           </tr>
+           <tr>
+             <td><img src="./boc_files/boc08_line5.gif" width="200" height="8"></td>
+           </tr>
+
+           <tr>
+            <td>&nbsp;&nbsp;<img src="./boc_files/boc08_dotb.gif" width="13" height="13" hspace="3" align="absmiddle">
+             <a href="http://www.boc.cn/en/bocinfo/bi4/" class="nav">RMB Deposit Rates</a></td>
+           </tr>
+           <tr>
+             <td><img src="./boc_files/boc08_line5.gif" width="200" height="8"></td>
+           </tr>
+
+           <tr>
+            <td>&nbsp;&nbsp;<img src="./boc_files/boc08_dotb.gif" width="13" height="13" hspace="3" align="absmiddle">
+             <a href="http://www.boc.cn/en/bocinfo/bi5/" class="nav">Forex Deposit Rates</a></td>
+           </tr>
+           <tr>
+             <td><img src="./boc_files/boc08_line5.gif" width="200" height="8"></td>
+           </tr>
+	  
+      </tbody></table>
+		    
+      <br>
+      <br>
+      <table width="100%" border="0" cellspacing="1" cellpadding="0">
+        <tbody><tr>
+          <td height="135" valign="top" background="./boc_files/boc08_right4.jpg" class="brd3">&nbsp;</td>
+        </tr>
+      </tbody></table>
+</td>
+    <td width="4" background="./boc_files/boc08_brd3.gif"><img src="./boc_files/boc08_brd3.gif"></td>
+    <td width="23" valign="bottom" class="pbrdr"><img src="./boc_files/boc08_doth.gif" width="5" height="1"></td>
+  </tr>
+</tbody></table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tbody><tr>
+    <td width="15" class="pbrdl">&nbsp;</td>
+    <td width="661" align="right"><table width="656" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="75" background="./boc_files/boc08_line6.gif" class="brd1"><table width="620" border="0">
+          <tbody><tr>
+            <td align="left" class="laugl">&nbsp;
+                
+                  <a href="http://www.boc.cn/custserv/cs1/200812/t20081209_135605.html" class="laug">Site Map</a>
+                  |
+                  <a href="http://www.boc.cn/en/custserv/cs1/200812/t20081213_311625.html" class="laug">Contact Us</a>
+                  |
+                  <a href="http://www.boc.cn/custserv/cs1/200812/t20081209_135606.html" class="laug">Copyright</a>
+                  |
+                <span class="laugl">京ICP证 060399号</span></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table></td>
+    <td width="246" align="center" valign="top" class="brd1"><img src="./boc_files/boc08_95566.gif" width="99" height="52"></td>
+    <td width="4" background="./boc_files/boc08_brd3.gif"><img src="./boc_files/boc08_brd3.gif" width="4" height="2"></td>
+    <td width="23" class="pbrdr"><table width="2" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="75" bgcolor="#F3F3F3"><img src="./boc_files/dot.gif" width="2" height="1"></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tbody><tr>
+    <td width="15" class="pbrdl">&nbsp;</td>
+    <td width="661" align="right"><table width="656" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="40" align="right" valign="top" bgcolor="#F3F3F3" class="brd1"><span class="copyrt">Copyright
+          © 2008 BANK OF CHINA(BOC) All Rights Reserved.</span><img src="./boc_files/bankofchina_LOGO-s.gif" width="90" hspace="10" align="absmiddle"></td>
+      </tr>
+    </tbody></table></td>
+    <td width="251" valign="top" bgcolor="#EEEEEE"><img src="./boc_files/boc08_r8.gif" width="251" height="25"></td>
+    <td width="23" class="pbrdr"><table width="2" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td height="40" bgcolor="#F3F3F3"><img src="./boc_files/dot.gif" width="2" height="1"></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr>
+    <td class="pbrdl"><img src="./boc_files/boc08_brd1.gif" width="15" height="2"></td>
+    <td colspan="2" align="right" valign="top" height="8"><table width="906" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td bgcolor="#CAC8C9"><img src="./boc_files/dot.gif" width="1" height="1"></td>
+      </tr>
+    </tbody></table></td>
+    <td valign="top" class="pbrdr"><img src="./boc_files/boc08_doth.gif" width="5" height="1"></td>
+  </tr>
+</tbody></table>
+
+</body></html>

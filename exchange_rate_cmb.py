@@ -55,5 +55,16 @@ if __name__ == '__main__':
     conn.close()
 
     parser.feed(html)
-    for each in parser.exchange_rates:
-        print each
+
+    from prettytable import PrettyTable
+    x = PrettyTable()
+
+    header = parser.exchange_rates[0]
+    x.field_names = header
+    for row in parser.exchange_rates[1:]:
+        x.add_row(row)
+    # Change some column alignments; default was 'c'
+
+    x.align = "r"
+    x.align[header[0]] = 'l'
+    print x

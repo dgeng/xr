@@ -2,7 +2,7 @@ import httplib, urllib
 from urlparse import urlparse
 from HTMLParser import HTMLParser
 
-URL_PBOC_EXCHANGE_RATE = 'http://www.boc.cn/sourcedb/whpj/enindex.html'
+URL_EXCHANGE_RATE_BOC = 'http://www.boc.cn/sourcedb/whpj/enindex.html'
 
 class BOCHTMLParser(HTMLParser):
     def __init__(self):
@@ -46,7 +46,7 @@ class BOCHTMLParser(HTMLParser):
 if __name__ == '__main__':
     parser = BOCHTMLParser()
 
-    u = urlparse(URL_PBOC_EXCHANGE_RATE)
+    u = urlparse(URL_EXCHANGE_RATE_BOC)
     conn = httplib.HTTPConnection(u.hostname, u.port)
 
     conn.request("GET", u.path)

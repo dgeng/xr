@@ -10,7 +10,7 @@ PUT /forex
          	"cach_selling_rate": {"type" : "double"},
          	"middle_rate": {"type" : "double"},
          	"pub_time": {"type" : "date", "format" : "yyyy-MM-dd HH:mm:ss"}
-         }
-     }
+      }
+    }
   }
 }

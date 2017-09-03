@@ -3,6 +3,8 @@ PUT /forex
   "mappings": {
      "currency_type" : {
      	"properties" : {
+          "@timestamp": {"type" : "date", "format" : "yyyy-MM-dd HH:mm:ss"},
+          "@version": {"type" : "integer"},
          	"currency": {"type" : "string"},
          	"buying_rate": {"type" : "double"},
          	"cash_buying_rate": {"type" : "double"},

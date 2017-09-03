@@ -49,8 +49,7 @@ class BOCHTMLParser(HTMLParser):
             return '-'
         return data.replace('\n\t\t', ' ')
 
-
-if __name__ == '__main__':
+def fetch_raw_exchange_rates():
     parser = BOCHTMLParser()
 
     u = urlparse(URL_EXCHANGE_RATE_BOC)
@@ -61,13 +60,38 @@ if __name__ == '__main__':
     html = response.read()
     conn.close()
     parser.feed(html)
+    return parser.exchange_rates
 
+def fetch_exchange_rates():
+    raw_rates = fetch_raw_exchange_rates()[1:] # remove header
+    rates = []
+    for currency, buying_rate, cash_buying_rate, selling_rate, cach_selling_rate, middle_rate, pub_time in raw_rates:
+        rate = {
+            "currency": currency,
+            "buying_rate": buying_rate,
+            "cash_buying_rate": cash_buying_rate,
+            "selling_rate": selling_rate,
+            "cach_selling_rate": cach_selling_rate,
+            "middle_rate": middle_rate,
+            "pub_time": pub_time
+        }
+
+        for k, v in rate.items():
+            if v == '-':
+                rate[k] = '0.0'
+
+        rates.append(rate)
+
+    return rates
+
+if __name__ == '__main__':
+    exchange_rates = fetch_raw_exchange_rates()
     import prettytable
     x = prettytable.PrettyTable()
 
-    header = parser.exchange_rates[0]
+    header = exchange_rates[0]
     x.field_names = header
-    for row in parser.exchange_rates[1:]:
+    for row in exchange_rates[1:]:
         x.add_row(row)
     # Change some column alignments; default was 'c'
 

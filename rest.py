@@ -9,4 +9,4 @@ if __name__ == '__main__':
     r = redis.StrictRedis(host='10.0.0.30', port=6379, db=0)
     for rate in rates:
         payload = json.dumps(rate)
-        r.lpush('logstash', payload)
+        r.rpush('logstash', payload)

@@ -1,10 +1,11 @@
 filebeat.prospectors:
-- input_type: log
-  paths:
+- paths:
     - /data/*.log
+  input_type: log
+  json.keys_under_root: true
 
 output.elasticsearch:
   hosts: ["10.0.0.10:9200"]
-#  template.name: "filebeat"
-#  template.path: "filebeat.template.json"
-#  template.overwrite: false
+  template.name: "filebeat"
+  template.path: "filebeat.template.json"
+  template.overwrite: false

@@ -7,13 +7,22 @@ import schedule
 from exchange_rate_boc import fetch_exchange_rates
 
 
+prev_payload = ''
+
 def job():
+    global prev_payload
     try:
         rates = fetch_exchange_rates()
+        payload = '\n'.join([json.dumps(rate) for rate in rates])
+
+        # don't log if it's the same as before
+        if payload == prev_payload:
+            return
+        prev_payload = payload
+
         f = open('/data/crawler.log', 'a')
-        for rate in rates:
-            payload = json.dumps(rate)
-            f.write(payload); f.write('\n')
+        f.write(payload) # json lines
+        f.write('\n') # extra new line
         f.close()
     except:
         traceback.print_exc(file=sys.stderr)

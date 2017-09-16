@@ -72,9 +72,13 @@ def fetch_exchange_rates():
             "pub_time": pub_time
         }
 
+        # normalize the data
         for k, v in rate.items():
             if v == '-':
                 rate[k] = '0.0'
+
+            if k == 'pub_time':
+                rate[k] = ''.join([c for c in v if c in '0123456789-: ']) # valid chars for date from BOC
 
         rates.append(rate)
 

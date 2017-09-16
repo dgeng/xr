@@ -1,6 +1,9 @@
-import httplib, urllib
-from urlparse import urlparse
-from HTMLParser import HTMLParser
+import logging
+import requests
+from html.parser import HTMLParser
+
+logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 URL_EXCHANGE_RATE_CMB = 'http://fx.cmbchina.com/hq/'
 
@@ -46,15 +49,8 @@ class CMBHTMLParser(HTMLParser):
 if __name__ == '__main__':
     parser = CMBHTMLParser()
 
-    u = urlparse(URL_EXCHANGE_RATE_CMB)
-    conn = httplib.HTTPConnection(u.hostname, u.port)
-
-    conn.request("GET", u.path)
-    response = conn.getresponse()
-    html = response.read()
-    conn.close()
-
-    parser.feed(html)
+    r = requests.get(URL_EXCHANGE_RATE_CMB)
+    parser.feed(r.text)
 
     from prettytable import PrettyTable
     x = PrettyTable()
@@ -67,4 +63,4 @@ if __name__ == '__main__':
 
     x.align = "r"
     x.align[header[0]] = 'l'
-    print x
+    print(x)

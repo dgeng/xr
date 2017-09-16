@@ -1,4 +1,4 @@
-FROM busybox
+FROM raspbian/jessie 
 
 VOLUME /data
 

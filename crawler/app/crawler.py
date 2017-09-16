@@ -1,3 +1,4 @@
+import os
 import time
 import json
 import sys
@@ -7,6 +8,10 @@ import schedule
 from exchange_rate_boc import fetch_exchange_rates
 
 
+LOG_FILENAME = '/data/crawler.log'
+
+DEBUG = 'DEV' == os.environ.get('ENV')
+
 prev_payload = ''
 
 def job():
@@ -15,12 +20,13 @@ def job():
         rates = fetch_exchange_rates()
         payload = '\n'.join([json.dumps(rate) for rate in rates])
 
-        # don't log if it's the same as before
-        if payload == prev_payload:
+        # same as before?
+        if payload == prev_payload and not DEBUG:
             return
+
         prev_payload = payload
 
-        f = open('/data/crawler.log', 'a')
+        f = open(LOG_FILENAME, 'a')
         f.write(payload) # json lines
         f.write('\n') # extra new line
         f.close()
@@ -28,14 +34,16 @@ def job():
         traceback.print_exc(file=sys.stderr)
 
 
-schedule.every(5).minutes.do(job)
-# schedule.every().hour.do(job)
-# schedule.every().day.at("10:30").do(job)
-# schedule.every().monday.do(job)
-# schedule.every().wednesday.at("13:15").do(job)
+interval = 5
+if DEBUG:
+    interval = 1
+
+schedule.every(interval).minutes.do(job)
 
 
 if __name__ == '__main__':
+    job() # run it now
     while True:
         schedule.run_pending()
         time.sleep(1)
+

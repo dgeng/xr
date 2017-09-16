@@ -26,8 +26,8 @@ def job():
         payload = '\n'.join([json.dumps(rate) for rate in rates])
 
         # same as before?
-        if payload == prev_payload and not DEBUG:
-            logging.info("payload the same as previous, don't queue it!")
+        if payload == prev_payload:
+            logger.debug("same payload, don't queue!")
             return
 
         prev_payload = payload

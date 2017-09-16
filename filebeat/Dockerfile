@@ -1,4 +1,4 @@
-FROM raspbian/jessie 
+FROM raspbian/jessie
 
 VOLUME /data
 

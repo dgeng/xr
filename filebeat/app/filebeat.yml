@@ -6,6 +6,7 @@ filebeat.prospectors:
 
 output.elasticsearch:
   hosts: ["10.0.0.10:9200"]
-  template.name: "filebeat"
+  index: "boc-%{+yyyy.MM.dd}"
+  template.name: "boc"
   template.path: "filebeat.template.json"
-  template.overwrite: false
+  template.overwrite: true

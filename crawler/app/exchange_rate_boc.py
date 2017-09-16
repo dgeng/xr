@@ -1,6 +1,9 @@
-import httplib, urllib
-from urlparse import urlparse
-from HTMLParser import HTMLParser
+import logging
+import requests
+from html.parser import HTMLParser
+
+logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 URL_EXCHANGE_RATE_BOC = 'http://www.boc.cn/sourcedb/whpj/enindex.html'
 
@@ -51,15 +54,8 @@ class BOCHTMLParser(HTMLParser):
 
 def fetch_raw_exchange_rates():
     parser = BOCHTMLParser()
-
-    u = urlparse(URL_EXCHANGE_RATE_BOC)
-    conn = httplib.HTTPConnection(u.hostname, u.port)
-
-    conn.request("GET", u.path)
-    response = conn.getresponse()
-    html = response.read()
-    conn.close()
-    parser.feed(html)
+    r = requests.get(URL_EXCHANGE_RATE_BOC)
+    parser.feed(r.text)
     return parser.exchange_rates
 
 def fetch_exchange_rates():
@@ -98,4 +94,4 @@ if __name__ == '__main__':
     # x.hrules = prettytable.ALL
     x.align = "r"
     x.align[header[0]] = 'l'
-    print x
+    print(x)

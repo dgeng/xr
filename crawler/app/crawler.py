@@ -3,9 +3,14 @@ import time
 import json
 import sys
 import traceback
+import asyncio
+import logging
 import requests
-import schedule
 from exchange_rate_boc import fetch_exchange_rates
+
+
+logging.basicConfig(format='%(asctime)s %(message)s', level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 
 LOG_FILENAME = '/data/crawler.log'
@@ -22,6 +27,7 @@ def job():
 
         # same as before?
         if payload == prev_payload and not DEBUG:
+            logging.info("payload the same as previous, don't queue it!")
             return
 
         prev_payload = payload
@@ -34,11 +40,20 @@ def job():
         traceback.print_exc(file=sys.stderr)
 
 
-interval = 5
+interval = 5 * 60
 if DEBUG:
-    interval = 1
+    interval = 60
 
-schedule.every(interval).minutes.do(job)
+
+@asyncio.coroutine
+def my_coroutine(seconds_to_sleep=interval):
+    while True:
+        job()
+        yield from asyncio.sleep(seconds_to_sleep)
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(asyncio.gather(my_coroutine()))
+loop.close()
 
 
 if __name__ == '__main__':

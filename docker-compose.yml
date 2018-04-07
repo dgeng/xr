@@ -1,0 +1,22 @@
+version: '2'
+services:
+  crawler:
+    container_name: crawler
+    build: crawler
+    restart: unless-stopped
+    volumes:
+      - log-data:/data
+    working_dir: /app
+    command: python3 crawler.py
+  filebeat:
+    container_name: filebeat
+    build: filebeat
+    restart: unless-stopped
+    volumes:
+      - log-data:/data
+    working_dir: /app
+    command: ./filebeat -e -c filebeat.yml -d public
+    depends_on:
+      - crawler
+volumes:
+  log-data:
